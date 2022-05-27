@@ -56,14 +56,21 @@ export default function App() {
 
         {products.map((product) => {
           return (
-            <pre>
+            <>
               <pre>{JSON.stringify(product)}</pre>
               <h1>{product.category}</h1>
               <img src={product.image} alt="" className="img" />
               <h4>{product.title}</h4>
               <p>{product.description}</p>
               <span>Price: ${product.price}</span>
-            </pre>
+
+              <div>
+                <h4>{product.username}</h4>
+                <h4>{product.email}</h4>
+                <h4>{product.phone}</h4>
+                <h4>{product.password}</h4>
+              </div>
+            </>
           );
         })}
       </div>
