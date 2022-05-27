@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useImperativeHandle, useState } from "react";
 import "./styles.css";
 
 export default function App() {
@@ -53,17 +53,22 @@ export default function App() {
         <button onClick={() => setProduct("carts")}>Cart</button>
         <button onClick={() => setProduct("users")}>Users</button>
         <button onClick={() => setProduct("login")}>Login</button>
-        <h2>{product}</h2>
+        <h2>{product.product}</h2>
         {products.map((product) => {
           return (
             <pre key={product.id}>
+              <pre>{JSON.stringify(product)}</pre>
               <h1>{product.category}</h1>
               <img src={product.image} alt="" className="img" />
               <h4>{product.title}</h4>
+              <h4>Username{product.username}</h4>
+              <h4>{product["name"]["firstname"]}</h4>
+
+              <h4>{product.email}</h4>
+              <h4>{product.password}</h4>
+
               <p>{product.description}</p>
               <span>Price: ${product.price}</span>
-              <h4>{JSON.stringify(product.title)}</h4>
-              <br />
             </pre>
           );
         })}
