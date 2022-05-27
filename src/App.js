@@ -63,10 +63,9 @@ export default function App() {
               <h4>{product.title}</h4>
               <h4>Username: {product.username}</h4>
 
-              {/* <h4>{product.name["firstname"]}</h4>
-              <h4>{product.name["lasttname"]}</h4> 
-              <h4>{product.address["city"]}</h4> 
-              */}
+              <h4>{product.name["firstname"]}</h4>
+              <h4>{product.name["lasttname"]}</h4>
+              <h4>{product.address["city"]}</h4>
 
               <h4>Email: {product.email}</h4>
               <h4>Phone: {product.phone}</h4>
