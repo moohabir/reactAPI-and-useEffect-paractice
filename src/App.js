@@ -41,6 +41,7 @@ export default function App() {
         <button onClick={() => setResourceType("users")}>Users</button>
         <button onClick={() => setResourceType("comments")}>Comments</button>
         <h2>{resourceType}</h2>
+
         {items.map((item) => {
           return <pre key={item.id}>{JSON.stringify(item)} </pre>;
         })}
@@ -53,16 +54,17 @@ export default function App() {
         <button onClick={() => setProduct("carts")}>Cart</button>
         <button onClick={() => setProduct("users")}>Users</button>
         <button onClick={() => setProduct("login")}>Login</button>
-
+        <h1>{product}</h1>
         {products.map((product) => {
           return (
             <>
               <pre>{JSON.stringify(product)}</pre>
+
               <h1>{product.category}</h1>
               <img src={product.image} alt="" className="img" />
               <h4>{product.title}</h4>
               <p>{product.description}</p>
-              <span>Price: ${product.price}</span>
+              <p>Price: ${product.price}</p>
 
               <div>
                 <h4>{product.username}</h4>
