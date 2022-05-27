@@ -53,25 +53,13 @@ export default function App() {
         <button onClick={() => setProduct("carts")}>Cart</button>
         <button onClick={() => setProduct("users")}>Users</button>
         <button onClick={() => setProduct("login")}>Login</button>
-        <h2>{product.product}</h2>
+
         {products.map((product) => {
           return (
-            <pre key={product.id}>
-              <pre>{JSON.stringify(product)}</pre>
+            <pre>
               <h1>{product.category}</h1>
               <img src={product.image} alt="" className="img" />
               <h4>{product.title}</h4>
-              <h4>Username: {product.username}</h4>
-
-              <h4>{product.name["firstname"]}</h4>
-              <h4>{product.name["lasttname"]}</h4>
-              <h4>{product.address["city"]}</h4>
-
-              <h4>Email: {product.email}</h4>
-              <h4>Phone: {product.phone}</h4>
-
-              <h4>Password :{product.password}</h4>
-
               <p>{product.description}</p>
               <span>Price: ${product.price}</span>
             </pre>
