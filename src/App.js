@@ -74,21 +74,16 @@ export default function App() {
               <h4>{product.title}</h4>
               <p>{product.description}</p>
               <p>Price: ${product.price}</p>
+
+              <h4>{product.username}</h4>
+              <h4>{product.firstnam}</h4>
+              <h4>{product.email}</h4>
+              <h4>{product.phone}</h4>
+              <h4>{product.password}</h4>
             </>
           );
         })}
       </div>
-      {users.map((user) => {
-        return (
-          <div>
-            <h4>{user.username}</h4>
-            <h4>{user.firstnam}</h4>
-            <h4>{product.email}</h4>
-            <h4>{product.phone}</h4>
-            <h4>{product.password}</h4>
-          </div>
-        );
-      })}
     </>
   );
 }
