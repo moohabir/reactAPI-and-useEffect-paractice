@@ -7,20 +7,12 @@ export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [product, setProduct] = useState("products");
   const [products, setProducts] = useState([]);
-  const [users, setUsers] = useState(["name"]);
-  const [userName, setUserName] = useState("user");
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/${product}`)
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, [product]);
-
-  useEffect(() => {
-    fetch(`https://fakestoreapi.com/${userName}`)
-      .then((res) => res.json())
-      .then((json) => setUsers(json.name));
-  }, [userName]);
 
   useEffect(() => {
     console.log("useEffects created");
@@ -76,7 +68,7 @@ export default function App() {
               <p>Price: ${product.price}</p>
 
               <h4>{product.username}</h4>
-              <h4>{product.firstnam}</h4>
+              {/*<h4>{product.name.firstnam}</h4>*/}
               <h4>{product.email}</h4>
               <h4>{product.phone}</h4>
               <h4>{product.password}</h4>
