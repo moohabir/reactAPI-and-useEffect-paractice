@@ -6,7 +6,7 @@ export default function App() {
   const [items, setItems] = useState([]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [product, setProduct] = useState("products");
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(["json.name"]);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/${product}`)
@@ -32,8 +32,6 @@ export default function App() {
       window.removeEventListener("resize", handle);
     };
   }, [windowWidth]);
-
-  const name= products.name;
 
   return (
     <>
@@ -70,11 +68,12 @@ export default function App() {
               <h4>{product.email}</h4>
               <h4>{product.phone}</h4>
               <h4>{product.password}</h4>
+              {/* this object isnot displaying <h4>{products.name.firtname}</h4>
+              <h4>{products.name.lastname}</h4>
+          <h4>{products.address.city}</h4>*/}
             </>
           );
         })}
-        
-  
       </div>
     </>
   );
