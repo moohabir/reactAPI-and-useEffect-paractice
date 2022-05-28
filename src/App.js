@@ -55,7 +55,6 @@ export default function App() {
         <button onClick={() => setProduct("users")}>Users</button>
         <button onClick={() => setProduct("login")}>Login</button>
         <h1>{product}</h1>
-
         {products.map((product) => {
           return (
             <>
