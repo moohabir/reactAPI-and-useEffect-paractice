@@ -73,10 +73,8 @@ export default function App() {
             </>
           );
         })}
-        {products.forEach(function(product) {
-                {console.log(product.name)}
-                
-            })}
+        
+  
       </div>
     </>
   );
