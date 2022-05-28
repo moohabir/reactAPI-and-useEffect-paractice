@@ -33,6 +33,8 @@ export default function App() {
     };
   }, [windowWidth]);
 
+  const name= products.name;
+
   return (
     <>
       <div className="App">
@@ -65,13 +67,16 @@ export default function App() {
               <p>{product.description}</p>
               <p>Price: ${product.price}</p>
               <h4>{product.username}</h4>
-              {/*<h4>{product.name.firstnam}</h4>*/}
               <h4>{product.email}</h4>
               <h4>{product.phone}</h4>
               <h4>{product.password}</h4>
             </>
           );
         })}
+        {products.forEach(function(product) {
+                {console.log(product.name)}
+                
+            })}
       </div>
     </>
   );
